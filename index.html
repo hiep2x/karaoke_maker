@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karaoke Maker Support - App information, help, FAQs, and contact details for Karaoke Maker." />
+  <meta name="theme-color" content="#7C3AED" />
+  <title>Karaoke Maker - Support</title>
+
+  <style>
+    :root {
+      --bg: #0b0b12;
+      --card: rgba(255, 255, 255, 0.07);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #f7f7fb;
+      --muted: #b7b7c7;
+      --primary: #8b5cf6;
+      --primary-2: #ec4899;
+      --accent: #22d3ee;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(139, 92, 246, 0.22), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(236, 72, 153, 0.16), transparent 25%),
+        radial-gradient(circle at 50% 90%, rgba(34, 211, 238, 0.10), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(11, 11, 18, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      padding: 92px 0 64px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #ddddea;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 8vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #c4b5fd, #f9a8d4, #67e8f9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 20px);
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      transition: transform .2s ease, opacity .2s ease, border-color .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 14px 40px rgba(139, 92, 246, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 5vw, 44px);
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      font-size: 24px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .support-box {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      background:
+        linear-gradient(140deg, rgba(139, 92, 246, 0.18), rgba(236, 72, 153, 0.08)),
+        var(--card);
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 800;
+      word-break: break-word;
+    }
+
+    .small {
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 16px;
+      padding: 17px 18px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      color: var(--muted);
+      padding-top: 10px;
+    }
+
+    footer {
+      padding: 54px 0 34px;
+      text-align: center;
+      color: #8f8fa1;
+      font-size: 14px;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 850px) {
+      .grid,
+      .support-box {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, 1100px);
+      }
+
+      .hero {
+        padding: 58px 0 42px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Karaoke Maker">
+        <span class="logo">🎤</span>
+        <span>Karaoke Maker</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="badge">🎵 Karaoke creation made easier</div>
+
+        <h1>
+          Create karaoke videos<br />
+          <span class="gradient-text">your way</span>
+        </h1>
+
+        <p>
+          Karaoke Maker helps you turn your favorite songs into karaoke videos
+          with instrumental tracks, precisely aligned lyrics, customizable visuals,
+          and easy video export.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:voicepitch.team@gmail.com">
+            ✉️ Contact Support
+          </a>
+          <a class="btn btn-secondary" href="#features">
+            Explore Features
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Karaoke Maker</h2>
+          <p>
+            Karaoke Maker is designed to simplify the karaoke creation process,
+            from audio processing and lyric alignment to video customization and export.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            With Karaoke Maker, you can import a song, separate vocals from the
+            instrumental track, adjust the song key, add lyrics, align lyrics with
+            the music, and customize the visual style of your karaoke video.
+            Once everything is ready, you can export the finished video for saving
+            or sharing on other platforms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Key Features</h2>
+          <p>Everything you need to create a complete karaoke video.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="feature-icon">🎚️</div>
+            <h3>Vocal Separation</h3>
+            <p>
+              Separate vocals from the original song to create an instrumental track
+              for your karaoke project.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon">🎼</div>
+            <h3>Key Adjustment</h3>
+            <p>
+              Change the pitch of the song to find a key that better fits your voice
+              and singing style.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon">✨</div>
+            <h3>Lyric Alignment</h3>
+            <p>
+              Align lyrics with the music timing so each line appears at the right
+              moment while singing.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon">🎨</div>
+            <h3>Visual Customization</h3>
+            <p>
+              Customize fonts, text size, colors, backgrounds, and other visual
+              settings for your karaoke video.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon">🎬</div>
+            <h3>Video Export</h3>
+            <p>
+              Render your completed karaoke project into a video that can be saved
+              or shared on other platforms.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon">📱</div>
+            <h3>Easy to Use</h3>
+            <p>
+              A clear step-by-step workflow makes karaoke creation accessible even
+              if you have no video editing experience.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Frequently Asked Questions</h2>
+          <p>Helpful information about using Karaoke Maker.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>What is Karaoke Maker used for?</summary>
+            <p>
+              Karaoke Maker helps you create karaoke videos from songs by preparing
+              an instrumental track, adding lyrics, aligning lyric timing, and
+              customizing the final video design.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I change the key of a song?</summary>
+            <p>
+              Yes. Karaoke Maker allows you to adjust the song key so you can choose
+              a pitch that feels more comfortable for your voice.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I customize how the lyrics look?</summary>
+            <p>
+              Yes. You can customize fonts, text size, colors, backgrounds, and
+              other visual settings for your karaoke video.
+            </p>
+          </details>
+
+          <details>
+            <summary>Where can I get help if I have a problem?</summary>
+            <p>
+              You can contact the Karaoke Maker support team directly at
+              voicepitch.team@gmail.com.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="support-box">
+          <div class="card contact-card">
+            <div class="section-heading">
+              <h2>Need Support?</h2>
+              <p>
+                If you encounter an issue, have a question about using Karaoke Maker,
+                or would like to send feedback, please contact us by email.
+              </p>
+            </div>
+
+            <a class="contact-email" href="mailto:voicepitch.team@gmail.com">
+              voicepitch.team@gmail.com
+            </a>
+
+            <p class="small">
+              When reporting an issue, please include a short description of the
+              problem and the app version you are using whenever possible.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">💌</div>
+            <h3>We Welcome Your Feedback</h3>
+            <p>
+              Suggestions about the user experience, new features, or problems you
+              encounter help us continue improving Karaoke Maker.
+            </p>
+
+            <a
+              class="btn btn-secondary"
+              style="margin-top: 22px;"
+              href="mailto:voicepitch.team@gmail.com?subject=Karaoke%20Maker%20Support"
+            >
+              Send Email
+            </a>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Karaoke Maker. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
